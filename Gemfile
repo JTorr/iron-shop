@@ -19,6 +19,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'stripe'
+gem 'sidekiq'
 
 group :production do
   gem 'rails_12factor'
