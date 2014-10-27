@@ -59,6 +59,6 @@ Feedback and Future Development
 Features & Fixes planned for future development:
 
 * Add photos of items
-* Add CSS styling to improve the appearance fo the app.
+* Add CSS styling to improve the appearance of the app.
 
 All bugs, feature requests, pull requests, feedback, etc., are welcome.
