@@ -1,25 +1,62 @@
-# Iron Shop
+IRON SHOP README
+======
 
-This will be another week-long project, similar to last week's. This time, we will be building a simple storefront. Planned class topics for the week:
+What is It?
+---------------
 
-* More on model specs
-* Stripe
-* Background workers
-* Closer look at SQL (w/ some Postgres specific features like full text search, JSON fields, views)
+Iron Shop is a group project developed along with 3 other students at the Iron Yard.
+It uses Stripe for payment processing, and mailers with background workers for price notifications.
 
-Client-side JS enhancements to this project are are welcome, but I expect most of the logic to be handled (and fully tested!) server side.
+My main contributions were:
 
-# Features
+1. The Price Watch feature, which includes a mailer and background workers to notify customers when an item's price is updated.
+2. The logic to allow sellers to post items (including the associated Rspec tests and factories).
 
-Here's your initial backlog. Your team should prioritize these -
 
-* Sending emails (including Devise emails) in the background (C)
-* Have at least 3 different user roles (e.g. shopper, seller, admin) with different features available to them
-* (Some) users can post items for sale
-* Users can search for items by title or description (pg_search is fine, elasticsearch would be cool if you're ambitious)
-* Sellers can distribute coupon codes that buyers apply at checkout
-* Take payments via e.g. Stripe (C)
-* Let users set a "price watch" that emails them within e.g. 10 minutes of an item's price changing (C)
-* Project tests running on Travis (or comparable service), with 100% test coverage (and badges to prove it)
+How Can I Use It?
+----------------
 
-(C) - should be at least partially covered in class
+IronShop is live on Heroku: https://iron-yard-shop.herokuapp.com/.
+Just remember it's not a real store, so the shipping time is "never".
+
+Installation
+----------------
+
+**This application uses Postgres. You must have that installed and open to run the app.
+
+First, clone the project:
+
+```
+git clone https://github.com/JTorr/iron-shop.git
+```
+
+Go into the directory where it is installed, and bundle the gems:
+
+```
+cd iron-shop
+bundle install
+```
+
+Then set up the database:
+
+```
+rake db:setup
+```
+
+Running the Application:
+----------------
+
+```
+bundle exec rails s
+```
+
+
+Feedback and Future Development
+----
+
+Features & Fixes planned for future development:
+
+* Add photos of items
+* Add CSS styling to improve the appearance fo the app.
+
+All bugs, feature requests, pull requests, feedback, etc., are welcome.
